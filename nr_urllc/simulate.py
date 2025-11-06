@@ -474,7 +474,8 @@ def run_ofdm_m2(cfg: dict) -> dict:
                 total_mask=total_mask,
             )
 
-            # --- Equalization ---
+            sigma2_fix = sigma2_fix * float(data_Es)  # align MMSE noise var with actual data RE energy
+# --- Equalization ---
             if eq_type == "mmse":
                 Y_eq = mmse_equalize(Y_used=Y, H_est_used=H_est, sigma2=sigma2_fix)
             else:

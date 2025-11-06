@@ -255,12 +255,24 @@ def autoramp_ofdm_m2_sweep(
     ch    = cfg0.get("channel", {})
     snr_list = list(ch["snr_db_list"])
     seed0 = int(sim.get("seed", 1234))
+    
+    chan_seed_fixed = int(cfg0.get('channel', {}).get('seed', seed0 + 7777))  # fixed channel across SNRs
     rng_run = utils.get_rng(seed0)   # one RNG for the whole autoramp sweep
     bits_per_frame = _bits_per_frame_M2(cfg0)
 
     points: List[SweepPoint] = []
 
     for idx, snr in enumerate(snr_list):
+        # ===== ADD THIS ADAPTIVE TARGET_ERRS =====
+        # At high SNR (>16 dB), BER is very low, so we need MINIMUM errors
+        # to avoid zero-error instability
+        if snr >= 20:
+            effective_target_errs = max(50, target_errs // 4)  # Minimum 50 errors
+        elif snr >= 16:
+            effective_target_errs = max(100, target_errs // 2)  # Minimum 100 errors
+        else:
+            effective_target_errs = target_errs
+        # ==========================================
         total_bits = 0
         total_errs = 0
         n_bits_try = max(min_bits, bits_per_frame)
@@ -275,6 +287,7 @@ def autoramp_ofdm_m2_sweep(
             cfg = deepcopy(cfg0)
             # single SNR run
             cfg["channel"]["snr_db_list"] = [float(snr)]
+            cfg['channel']['seed'] = chan_seed_fixed
             # grow n_bits each repetition, but simulate.py will round/pad to whole frames
             cfg["tx"]["n_bits"] = int(n_bits_try)
             # vary seed so repetitions are independent
@@ -283,7 +296,7 @@ def autoramp_ofdm_m2_sweep(
             cfg.setdefault("io", {})["plot"] = False
             cfg["io"]["show_plot"] = False
             cfg["io"]["write_json"] = False
-            cfg["sim"]["seed"] = snr_seed
+            cfg['sim']['seed'] = (snr_seed + 7919 * rep)
             res = simulate.run(cfg)  # expects "ber": [value] for this single SNR
             ber = float(res["ber"][0])
             # Pull EVM% and MSE from the M2 single-SNR result (use the first point)
@@ -360,8 +373,10 @@ def bler_ofdm_sweep(cfg: dict) -> dict:
     rng_seed = int(sim.get("seed", 0)); 
     rng = utils.get_rng(rng_seed)
 
-    # Independent RNGs for different random processes
-    rng_channel = utils.get_rng(rng_seed + 1000)  # For channel generation
+    
+    chan_seed_fixed = int(ch.get('seed', rng_seed + 1000))  # fixed channel RNG seed across SNRs
+# Independent RNGs for different random processes
+    # rng_channel will be instantiated per-SNR with chan_seed_fixed
     rng_payload = utils.get_rng(rng_seed + 2000)  # For payload data
     rng_noise = utils.get_rng(rng_seed + 3000)    # For AWGN noise
 
@@ -409,7 +424,12 @@ def bler_ofdm_sweep(cfg: dict) -> dict:
     bler = []; packets = []
     for i_snr, snr_db in enumerate(snr_list):
         
-        # Adaptively increase packets for high SNR
+        
+        # Reset RNGs per SNR so channel/data/noise sequences are identical across SNRs
+        rng_channel = utils.get_rng(chan_seed_fixed)
+        rng_payload = utils.get_rng(rng_seed + 2000)
+        rng_noise   = utils.get_rng(rng_seed + 3000)
+# Adaptively increase packets for high SNR
         if adaptive_packets and i_snr > 0 and len(bler) > 0:
             # Estimate required packets based on previous BLER
             last_bler = bler[-1]

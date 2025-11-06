@@ -42,6 +42,7 @@ pilots:
   power_mode: constrained
 
 channel:
+  seed: 4444
   model: tdl
   snr_db_list: [0, 4, 8, 12, 16, 20, 24]
   tdl:
@@ -74,13 +75,13 @@ fec:
     lifting_Z: 32
 
 autoramp:
-  target_errs: 1000
-  base_min_bits: 500000
-  min_used_res: 5000000
-  max_bits: 20000000
+  target_errs: 200
+  base_min_bits: 1000000
+  min_used_res: 10000000
+  max_bits: 50000000
   noise_blend_weight: 0.0
-  min_bits: 400000
-  growth: 3.0
+  min_bits: 800000
+  growth: 2.0
   
 bler:
   packets_per_snr: 100000
@@ -98,3 +99,6 @@ io:
     out_json: artifacts/m2_then_bler/bler_vs_snr.json
     out_plot: artifacts/m2_then_bler/bler_vs_snr.png
   out_urllc_json: artifacts/urllc_budget.json
+
+eq:
+  type: mmse
