@@ -1,42 +1,6 @@
 {
   "points": [
     {
-      "snr_db": 5.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 6.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 7.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
       "snr_db": 8.0,
       "K": 1,
       "n_packets": 0,
@@ -49,39 +13,15 @@
       "within_deadline": true
     },
     {
-      "snr_db": 9.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.967741935483871,
-      "bler_K": 0.967741935483871,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.032258064516129004,
-      "within_deadline": true
-    },
-    {
       "snr_db": 10.0,
       "K": 1,
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.8108108108108109,
-      "bler_K": 0.8108108108108109,
+      "bler_single": 0.7246376811594203,
+      "bler_K": 0.7246376811594203,
       "timely_success_count": 0,
-      "timely_success_prob": 0.18918918918918914,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 11.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.5454545454545454,
-      "bler_K": 0.5454545454545454,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.4545454545454546,
+      "timely_success_prob": 0.2753623188405797,
       "within_deadline": true
     },
     {
@@ -90,22 +30,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.4225352112676056,
-      "bler_K": 0.4225352112676056,
+      "bler_single": 0.30303030303030304,
+      "bler_K": 0.30303030303030304,
       "timely_success_count": 0,
-      "timely_success_prob": 0.5774647887323944,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 13.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.17647058823529413,
-      "bler_K": 0.17647058823529413,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.8235294117647058,
+      "timely_success_prob": 0.696969696969697,
       "within_deadline": true
     },
     {
@@ -114,22 +42,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.09259259259259259,
-      "bler_K": 0.09259259259259259,
+      "bler_single": 0.045787545787545784,
+      "bler_K": 0.045787545787545784,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9074074074074074,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 15.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.02077562326869806,
-      "bler_K": 0.02077562326869806,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9792243767313019,
+      "timely_success_prob": 0.9542124542124543,
       "within_deadline": true
     },
     {
@@ -138,22 +54,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.00889152341434499,
-      "bler_K": 0.00889152341434499,
+      "bler_single": 0.002732389748073665,
+      "bler_K": 0.002732389748073665,
       "timely_success_count": 0,
-      "timely_success_prob": 0.991108476585655,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 17.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.002,
-      "bler_K": 0.002,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.998,
+      "timely_success_prob": 0.9972676102519263,
       "within_deadline": true
     },
     {
@@ -162,38 +66,14 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.0005,
-      "bler_K": 0.0005,
+      "bler_single": 6e-05,
+      "bler_K": 6e-05,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9995,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 19.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0001,
-      "bler_K": 0.0001,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9999,
+      "timely_success_prob": 0.99994,
       "within_deadline": true
     },
     {
       "snr_db": 20.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 21.0,
       "K": 1,
       "n_packets": 0,
       "n_failures_single": 0,
@@ -217,18 +97,6 @@
       "within_deadline": true
     },
     {
-      "snr_db": 23.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
       "snr_db": 24.0,
       "K": 1,
       "n_packets": 0,
@@ -238,54 +106,6 @@
       "bler_K": 0.0,
       "timely_success_count": 0,
       "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 25.0,
-      "K": 1,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 5.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 6.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 7.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
       "within_deadline": true
     },
     {
@@ -301,39 +121,15 @@
       "within_deadline": true
     },
     {
-      "snr_db": 9.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.967741935483871,
-      "bler_K": 0.9365244536940688,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.06347554630593122,
-      "within_deadline": true
-    },
-    {
       "snr_db": 10.0,
       "K": 2,
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.8108108108108109,
-      "bler_K": 0.6574141709276845,
+      "bler_single": 0.7246376811594203,
+      "bler_K": 0.5250997689561017,
       "timely_success_count": 0,
-      "timely_success_prob": 0.3425858290723155,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 11.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.5454545454545454,
-      "bler_K": 0.29752066115702475,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.7024793388429753,
+      "timely_success_prob": 0.47490023104389834,
       "within_deadline": true
     },
     {
@@ -342,22 +138,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.4225352112676056,
-      "bler_K": 0.17853600476096013,
+      "bler_single": 0.30303030303030304,
+      "bler_K": 0.09182736455463729,
       "timely_success_count": 0,
-      "timely_success_prob": 0.8214639952390399,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 13.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.17647058823529413,
-      "bler_K": 0.031141868512110732,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9688581314878892,
+      "timely_success_prob": 0.9081726354453628,
       "within_deadline": true
     },
     {
@@ -366,22 +150,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.09259259259259259,
-      "bler_K": 0.008573388203017831,
+      "bler_single": 0.045787545787545784,
+      "bler_K": 0.0020964993492466016,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9914266117969822,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 15.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.02077562326869806,
-      "bler_K": 0.0004316265222028683,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9995683734777971,
+      "timely_success_prob": 0.9979035006507534,
       "within_deadline": true
     },
     {
@@ -390,22 +162,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.00889152341434499,
-      "bler_K": 7.90591886278452e-05,
+      "bler_single": 0.002732389748073665,
+      "bler_K": 7.465953735378067e-06,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9999209408113722,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 17.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.002,
-      "bler_K": 4e-06,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.999996,
+      "timely_success_prob": 0.9999925340462646,
       "within_deadline": true
     },
     {
@@ -414,38 +174,14 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.0005,
-      "bler_K": 2.5e-07,
+      "bler_single": 6e-05,
+      "bler_K": 3.6e-09,
       "timely_success_count": 0,
-      "timely_success_prob": 0.99999975,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 19.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0001,
-      "bler_K": 1e-08,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.99999999,
+      "timely_success_prob": 0.9999999964,
       "within_deadline": true
     },
     {
       "snr_db": 20.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 21.0,
       "K": 2,
       "n_packets": 0,
       "n_failures_single": 0,
@@ -469,18 +205,6 @@
       "within_deadline": true
     },
     {
-      "snr_db": 23.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
       "snr_db": 24.0,
       "K": 2,
       "n_packets": 0,
@@ -490,54 +214,6 @@
       "bler_K": 0.0,
       "timely_success_count": 0,
       "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 25.0,
-      "K": 2,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 5.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 6.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 7.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 1.0,
-      "bler_K": 1.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.0,
       "within_deadline": true
     },
     {
@@ -553,39 +229,15 @@
       "within_deadline": true
     },
     {
-      "snr_db": 9.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.967741935483871,
-      "bler_K": 0.906313987445873,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.09368601255412701,
-      "within_deadline": true
-    },
-    {
       "snr_db": 10.0,
       "K": 3,
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.8108108108108109,
-      "bler_K": 0.5330385169683929,
+      "bler_single": 0.7246376811594203,
+      "bler_K": 0.38050707895369684,
       "timely_success_count": 0,
-      "timely_success_prob": 0.4669614830316071,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 11.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.5454545454545454,
-      "bler_K": 0.16228399699474075,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.8377160030052593,
+      "timely_success_prob": 0.6194929210463032,
       "within_deadline": true
     },
     {
@@ -594,22 +246,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.4225352112676056,
-      "bler_K": 0.07543774849054653,
+      "bler_single": 0.30303030303030304,
+      "bler_K": 0.027826474107465846,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9245622515094535,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 13.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.17647058823529413,
-      "bler_K": 0.005495623855078365,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9945043761449216,
+      "timely_success_prob": 0.9721735258925341,
       "within_deadline": true
     },
     {
@@ -618,22 +258,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.09259259259259259,
-      "bler_K": 0.0007938322410201696,
+      "bler_single": 0.045787545787545784,
+      "bler_K": 9.599355994718871e-05,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9992061677589799,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 15.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.02077562326869806,
-      "bler_K": 8.96731001806513e-06,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.9999910326899819,
+      "timely_success_prob": 0.9999040064400528,
       "within_deadline": true
     },
     {
@@ -642,22 +270,10 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.00889152341434499,
-      "bler_K": 7.029566268036028e-07,
+      "bler_single": 0.002732389748073665,
+      "bler_K": 2.0399895446139314e-08,
       "timely_success_count": 0,
-      "timely_success_prob": 0.9999992970433732,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 17.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.002,
-      "bler_K": 8e-09,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.999999992,
+      "timely_success_prob": 0.9999999796001046,
       "within_deadline": true
     },
     {
@@ -666,38 +282,14 @@
       "n_packets": 0,
       "n_failures_single": 0,
       "n_failures_K": 0,
-      "bler_single": 0.0005,
-      "bler_K": 1.25e-10,
+      "bler_single": 6e-05,
+      "bler_K": 2.1600000000000001e-13,
       "timely_success_count": 0,
-      "timely_success_prob": 0.999999999875,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 19.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0001,
-      "bler_K": 1.0000000000000002e-12,
-      "timely_success_count": 0,
-      "timely_success_prob": 0.999999999999,
+      "timely_success_prob": 0.999999999999784,
       "within_deadline": true
     },
     {
       "snr_db": 20.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 21.0,
       "K": 3,
       "n_packets": 0,
       "n_failures_single": 0,
@@ -721,31 +313,7 @@
       "within_deadline": true
     },
     {
-      "snr_db": 23.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
       "snr_db": 24.0,
-      "K": 3,
-      "n_packets": 0,
-      "n_failures_single": 0,
-      "n_failures_K": 0,
-      "bler_single": 0.0,
-      "bler_K": 0.0,
-      "timely_success_count": 0,
-      "timely_success_prob": 1.0,
-      "within_deadline": true
-    },
-    {
-      "snr_db": 25.0,
       "K": 3,
       "n_packets": 0,
       "n_failures_single": 0,
@@ -758,27 +326,15 @@
     }
   ],
   "snr_list": [
-    5.0,
-    6.0,
-    7.0,
     8.0,
-    9.0,
     10.0,
-    11.0,
     12.0,
-    13.0,
     14.0,
-    15.0,
     16.0,
-    17.0,
     18.0,
-    19.0,
     20.0,
-    21.0,
     22.0,
-    23.0,
-    24.0,
-    25.0
+    24.0
   ],
   "K_list": [
     1,

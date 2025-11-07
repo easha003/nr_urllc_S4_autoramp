@@ -32,10 +32,10 @@ ofdm:
 # PILOT CONFIGURATION (Shared with RF)
 # ============================================================================
 pilots:
-  spacing: 2  # Comb spacing (every 2nd subcarrier)
+  spacing: 3  # Comb spacing (every 2nd subcarrier)
   offset: 0  # Starting offset
   seed: 999  # Pilot sequence seed
-  power_boost_db: 3.0  # Pilot power boost
+  power_boost_db: 0.0  # Pilot power boost
   power_mode: constrained  # Keep total power constant
 
 # ============================================================================
@@ -52,13 +52,13 @@ vlc:
   filter_order: 1  # LED low-pass filter order (1 or 2)
   
   # DCO-OFDM Parameters
-  dc_bias: 0.5  # DC bias ratio (0-1)
+  dc_bias: 0.6  # DC bias ratio (0-1)
                 # Controls tradeoff between clipping and power efficiency
                 # 0.3: Low overhead, high clipping (>10%)
                 # 0.5: Recommended balance (3-5% clipping)
                 # 0.7: Low clipping, high DC power waste
   
-  clipping_ratio: 0.95  # Max signal level relative to (1+dc_bias)
+  clipping_ratio: 0.98  # Max signal level relative to (1+dc_bias)
                         # 0.95: Leave 5% headroom
                         # 1.0: Full LED range (more clipping)
   
@@ -122,11 +122,11 @@ s4_sweep:
   K_list: [1, 2, 3]  # Number of transmission attempts to evaluate
   
   # SNR sweep range [start, stop, step]
-  snr_db_range: [5, 25, 1]  # VLC typically needs 5-25 dB range
+  snr_db_range: [8, 24, 2]  # VLC typically needs 5-25 dB range
                              # Note: VLC needs ~5 dB more than RF for same BLER
                              # due to clipping distortion and LED bandwidth limits
   
-  n_frames: 100  # Number of frames per SNR point (for BLER measurement)
+  n_frames: 400  # Number of frames per SNR point (for BLER measurement)
   
   policy: independent  # BLER combination policy: "independent" or "union_bound"
 
@@ -161,10 +161,10 @@ io:
   out_heatmap: artifacts/s4/s4_vlc_timely_heatmap.png
 
 bler:
-  packets_per_snr: 10000     # ↑ was ~20; raise to 2k–10k to calm variance
-  min_errors: 30           # ↑ collect enough errors for stable estimates
-  # max_packets_per_snr: 100000   # (optional) safety cap if you want one
-
+  packets_per_snr: 100000     # ↑ was ~20; raise to 2k–10k to calm variance
+  min_errors: 100           # ↑ collect enough errors for stable estimates
+  #max_packets_per_snr: 100000   # (optional) safety cap if you want one
+  adaptive_packets: true
 # ============================================================================
 # NOTES AND RECOMMENDATIONS
 # ============================================================================
