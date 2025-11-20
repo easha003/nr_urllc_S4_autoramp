@@ -32,6 +32,7 @@ from nr_urllc.s3_timely_bler_sweep import (
     plot_timely_bler_curves,
     plot_latency_cdf,
     plot_s3_heatmap,
+    plot_timely_bler_curves_combined,
 )
 
 
@@ -160,6 +161,7 @@ def main():
         plot_timely_bler_curves(s3_result, save_dir=args.out_dir)
         plot_latency_cdf(timing_ctrl, save_dir=args.out_dir)
         plot_s3_heatmap(s3_result, timing_ctrl, save_dir=args.out_dir)
+        plot_timely_bler_curves_combined(s3_result)
     except Exception as e:
         print(f"[S3 WARNING] Plot generation had issues: {e}")
         import traceback

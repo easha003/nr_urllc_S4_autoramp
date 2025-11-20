@@ -196,6 +196,58 @@ def plot_timely_bler_curves(
             plt.show()
         plt.close(fig)
 
+def plot_timely_bler_curves_combined(
+    s3_result: S3TimelySweepResult,
+    save_dir: str | Path = "artifacts/s3",
+    show: bool = False,
+):
+    """
+    Plot all K curves on the same figure for comparison.
+    
+    Args:
+        s3_result: S3TimelySweepResult
+        save_dir: Directory to save plot
+        show: Whether to display
+    """
+    import os
+    import matplotlib
+    if not os.environ.get("ALLOW_GUI_PLOTS", ""):
+        matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    
+    Path(save_dir).mkdir(parents=True, exist_ok=True)
+    
+    # Group points by K
+    by_K = {}
+    for pt in s3_result.points:
+        if pt.K not in by_K:
+            by_K[pt.K] = []
+        by_K[pt.K].append(pt)
+    
+    fig, ax = plt.subplots(figsize=(8, 5), dpi=130)
+    
+    for K in sorted(by_K.keys()):
+        points = sorted(by_K[K], key=lambda x: x.snr_db)
+        snr_vals = np.array([p.snr_db for p in points])
+        bler_K_vals = np.array([p.bler_K for p in points])
+        
+        ax.semilogy(snr_vals, np.clip(bler_K_vals, 1e-12, 1.0), 
+                    marker='o', linewidth=2, markersize=6, label=f'K={K}')
+    
+    ax.grid(True, which="both", alpha=0.3)
+    ax.set_xlabel("SNR (Eb/N0) [dB]")
+    ax.set_ylabel("BLER (TB error rate)")
+    ax.set_title("S3 — Timely BLER vs SNR (All K values)")
+    ax.legend(loc="best")
+    
+    fig.tight_layout()
+    out_path = Path(save_dir) / "timely_bler_vs_snr_combined.png"
+    fig.savefig(out_path, bbox_inches="tight", dpi=130)
+    print(f"[S3] Saved {out_path}")
+    
+    if show:
+        plt.show()
+    plt.close(fig)
 
 def plot_latency_cdf(
     timing_ctrl: S3TimingController,

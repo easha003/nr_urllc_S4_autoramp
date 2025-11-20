@@ -39,6 +39,7 @@ from nr_urllc.s3_timely_bler_sweep import (
     plot_timely_bler_curves,
     plot_latency_cdf,
     plot_s3_heatmap,
+    plot_timely_bler_curves_combined,
 )
 
 # S4 VLC channel
@@ -406,6 +407,15 @@ def main():
             if old_path.exists():
                 old_path.rename(new_path)
                 print(f"[S4] Renamed to {new_path.name}")
+
+        plot_timely_bler_curves_combined(s4_result, save_dir=args.out_dir)
+
+        # Then rename the output file to match VLC naming:
+        old_combined = Path(args.out_dir) / "timely_bler_vs_snr_combined.png"
+        new_combined = Path(args.out_dir) / "vlc_timely_bler_vs_snr_combined.png"
+        if old_combined.exists():
+            old_combined.rename(new_combined)
+            print(f"[S4] Renamed to {new_combined.name}")
         
         plot_latency_cdf(timing_ctrl, save_dir=args.out_dir)
         # Rename latency CDF
